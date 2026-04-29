@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Samuel Salas | Portafolio</title>
+  <link rel="stylesheet" href="bootstrap_min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ── CURSOR PERSONALIZADO ── -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- ── FONDO ANIMADO (CANVAS) ── -->
+<canvas id="bgCanvas"></canvas>
+
+<!-- ── THEME TOGGLE ── -->
+<button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+  <span class="toggle-icon sun">☀</span>
+  <span class="toggle-icon moon">◑</span>
+</button>
+
+<!-- ══════════════ NAVBAR ══════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#hero">
+      <span class="logo-bracket">&lt;</span>SS<span class="logo-bracket">/&gt;</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" data-nav>Sobre mí</a></li>
+      <li><a href="#skills" data-nav>Skills</a></li>
+      <li><a href="#projects" data-nav>Proyectos</a></li>
+      <li><a href="#contact" data-nav>Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section id="hero">
+  <div class="hero-container">
+    <div class="hero-badge reveal">
+      <span class="badge-dot"></span>
+      Disponible para proyectos
+    </div>
+    <h1 class="hero-name reveal">
+      Samuel<br>
+      <span class="name-accent">Salas</span>
+      <span class="name-last"> Echeverry</span>
+    </h1>
+    <div class="hero-typewriter reveal">
+      <span class="tw-prefix">{ </span>
+      <span id="typewriter"></span>
+      <span class="tw-cursor">|</span>
+      <span class="tw-suffix"> }</span>
+    </div>
+    <p class="hero-desc reveal">
+      Estudiante de Ingeniería Informática · 19 años · Medellín<br>
+      Construyendo el futuro, una línea de código a la vez.
+    </p>
+    <div class="hero-actions reveal">
+      <a href="#projects" class="btn-main">Ver mis proyectos</a>
+      <a href="#contact" class="btn-outline">Hablemos</a>
+    </div>
+    <div class="hero-scroll reveal">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </div>
+
+  <!-- Floating orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</section>
+
+<!-- ══════════════ ABOUT ══════════════ -->
+<section id="about">
+  <div class="container section-wrap">
+    <div class="section-label reveal">
+      <span class="label-num">01</span>
+      <span class="label-line"></span>
+      <span class="label-text">Sobre mí</span>
+    </div>
+
+        <div class="about-quick-info">
+          <div class="qi-item">
+            <span class="qi-icon">🎓</span>
+            <span>Ing. Informática — La Sallista</span>
+          </div>
+          <div class="qi-item">
+            <span class="qi-icon">📍</span>
+            <span>Medellín, Colombia</span>
+          </div>
+          <div class="qi-item">
+            <span class="qi-icon">🤖</span>
+            <span>Club de Robótica Universitario</span>
+          </div>
+          <div class="qi-item">
+            <span class="qi-icon">📚</span>
+            <span>5° Semestre en curso</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Texto -->
+      <div class="about-text-col reveal">
+        <h2 class="about-heading">Hola, soy <span class="accent">Samuel</span> 👋</h2>
+        <p class="about-p">
+          Tengo 19 años y soy estudiante de <strong>Ingeniería Informática</strong> en la
+          <strong>Universidad La Sallista</strong>, actualmente en quinto semestre.
+          Me apasiona construir soluciones digitales que combinen funcionalidad con un buen diseño.
+        </p>
+        <p class="about-p">
+          Soy miembro activo del <strong>Club de Robótica</strong> de mi universidad, donde
+          aprendemos sobre sistemas embebidos, automatización y trabajo en equipo aplicado
+          a proyectos reales.
+        </p>
+        <p class="about-p">
+          Me interesan el desarrollo web, la inteligencia artificial, la robótica y el diseño de interfaces.
+          Siempre estoy aprendiendo algo nuevo y buscando proyectos en los que pueda aportar valor.
+        </p>
+
+        <!-- Stats animados -->
+        <div class="about-stats">
+          <div class="stat-box reveal">
+            <span class="stat-num" data-count="5">0</span>
+            <span class="stat-unit">°</span>
+            <span class="stat-label">Semestre</span>
+          </div>
+          <div class="stat-box reveal">
+            <span class="stat-num" data-count="10">0</span>
+            <span class="stat-unit">+</span>
+            <span class="stat-label">Proyectos</span>
+          </div>
+          <div class="stat-box reveal">
+            <span class="stat-num" data-count="3">0</span>
+            <span class="stat-unit">+</span>
+            <span class="stat-label">Años cod.</span>
+          </div>
+        </div>
+
+        <a href="tu-cv.pdf" class="btn-main" download>Descargar CV ↓</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SKILLS ══════════════ -->
+<section id="skills">
+  <div class="container section-wrap">
+    <div class="section-label reveal">
+      <span class="label-num">02</span>
+      <span class="label-line"></span>
+      <span class="label-text">Stack & Skills</span>
+    </div>
+
+    <div class="skills-tabs reveal">
+      <button class="tab-btn active" data-tab="frontend">Frontend</button>
+      <button class="tab-btn" data-tab="backend">Backend</button>
+      <button class="tab-btn" data-tab="tools">Herramientas</button>
+      <button class="tab-btn" data-tab="robotics">Robótica</button>
+    </div>
+
+    <div class="skills-panels">
+      <div class="skills-panel active" data-panel="frontend">
+        <div class="skill-item" data-skill="HTML5" data-pct="90"><div class="sk-info"><span>HTML5</span><span class="sk-pct">90%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:90%"></div></div></div>
+        <div class="skill-item" data-skill="CSS3 / Bootstrap" data-pct="85"><div class="sk-info"><span>CSS3 / Bootstrap</span><span class="sk-pct">85%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:85%"></div></div></div>
+        <div class="skill-item" data-skill="JavaScript" data-pct="80"><div class="sk-info"><span>JavaScript</span><span class="sk-pct">80%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:80%"></div></div></div>
+        <div class="skill-item" data-skill="React" data-pct="65"><div class="sk-info"><span>React</span><span class="sk-pct">65%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:65%"></div></div></div>
+        <div class="skill-item" data-skill="TypeScript" data-pct="55"><div class="sk-info"><span>TypeScript</span><span class="sk-pct">55%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:55%"></div></div></div>
+      </div>
+      <div class="skills-panel" data-panel="backend">
+        <div class="skill-item"><div class="sk-info"><span>Node.js</span><span class="sk-pct">70%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:70%"></div></div></div>
+        <div class="skill-item"><div class="sk-info"><span>Python</span><span class="sk-pct">75%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:75%"></div></div></div>
+        <div class="skill-item"><div class="sk-info"><span>MySQL / PostgreSQL</span><span class="sk-pct">65%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:65%"></div></div></div>
+        <div class="skill-item"><div class="sk-info"><span>REST APIs</span><span class="sk-pct">70%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:70%"></div></div></div>
+        <div class="skill-item"><div class="sk-info"><span>Java</span><span class="sk-pct">60%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:60%"></div></div></div>
+      </div>
+      <div class="skills-panel" data-panel="tools">
+        <div class="skill-item"><div class="sk-info"><span>Git / GitHub</span><span class="sk-pct">80%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:80%"></div></div></div>
+        <div class="skill-item"><div class="sk-info"><span>VS Code</span><span class="sk-pct">90%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:90%"></div></div></div>
+        <div class="skill-item"><div class="sk-info"><span>Docker</span><span class="sk-pct">50%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:50%"></div></div></div>
+        <div class="skill-item"><div class="sk-info"><span>Linux</span><span class="sk-pct">65%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:65%"></div></div></div>
+        <div class="skill-item"><div class="sk-info"><span>Figma</span><span class="sk-pct">60%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:60%"></div></div></div>
+      </div>
+      <div class="skills-panel" data-panel="robotics">
+        <div class="skill-item"><div class="sk-info"><span>Arduino</span><span class="sk-pct">75%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:75%"></div></div></div>
+        <div class="skill-item"><div class="sk-info"><span>Raspberry Pi</span><span class="sk-pct">60%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:60%"></div></div></div>
+        <div class="skill-item"><div class="sk-info"><span>Electrónica básica</span><span class="sk-pct">65%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:65%"></div></div></div>
+        <div class="skill-item"><div class="sk-info"><span>Sistemas embebidos</span><span class="sk-pct">55%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:55%"></div></div></div>
+        <div class="skill-item"><div class="sk-info"><span>C / C++</span><span class="sk-pct">60%</span></div><div class="sk-bar"><div class="sk-fill" style="--pct:60%"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PROJECTS SLIDER ══════════════ -->
+<section id="projects">
+  <div class="container section-wrap">
+    <div class="section-label reveal">
+      <span class="label-num">03</span>
+      <span class="label-line"></span>
+      <span class="label-text">Proyectos</span>
+    </div>
+
+    <div class="slider-wrapper reveal">
+      <div class="slider-track" id="sliderTrack">
+
+        <!-- Proyecto 1 -->
+        <div class="slide-card">
+          <div class="sc-header">
+            <span class="sc-num">01</span>
+            <div class="sc-tags">
+              <span>React</span><span>Node.js</span><span>MongoDB</span>
+            </div>
+          </div>
+          <h3 class="sc-title">Nombre del Proyecto</h3>
+          <p class="sc-desc">
+            Describe aquí qué hace este proyecto, el problema que resuelve y tu rol.
+            Puedes hablar del impacto que tuvo o qué aprendiste desarrollándolo.
+          </p>
+          <div class="sc-footer">
+            <a href="#" class="sc-link">Ver demo →</a>
+            <a href="#" class="sc-link ghost">GitHub</a>
+          </div>
+          <div class="sc-glow"></div>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="slide-card">
+          <div class="sc-header">
+            <span class="sc-num">02</span>
+            <div class="sc-tags">
+              <span>Arduino</span><span>C++</span><span>Robótica</span>
+            </div>
+          </div>
+          <h3 class="sc-title">Proyecto Robótica</h3>
+          <p class="sc-desc">
+            Proyecto desarrollado en el Club de Robótica. Describe el robot o sistema que
+            construiste, las tecnologías usadas y los resultados obtenidos.
+          </p>
+          <div class="sc-footer">
+            <a href="#" class="sc-link">Ver más →</a>
+            <a href="#" class="sc-link ghost">GitHub</a>
+          </div>
+          <div class="sc-glow"></div>
+        </div>
+
+        <!-- Proyecto 3 -->
+        <div class="slide-card">
+          <div class="sc-header">
+            <span class="sc-num">03</span>
+            <div class="sc-tags">
+              <span>Python</span><span>FastAPI</span><span>MySQL</span>
+            </div>
+          </div>
+          <h3 class="sc-title">Proyecto Backend</h3>
+          <p class="sc-desc">
+            Otra aplicación que hayas construido. Menciona qué problema resuelve,
+            la arquitectura que usaste y cualquier detalle técnico interesante.
+          </p>
+          <div class="sc-footer">
+            <a href="#" class="sc-link">Ver demo →</a>
+            <a href="#" class="sc-link ghost">GitHub</a>
+          </div>
+          <div class="sc-glow"></div>
+        </div>
+
+        <!-- Proyecto 4 -->
+        <div class="slide-card">
+          <div class="sc-header">
+            <span class="sc-num">04</span>
+            <div class="sc-tags">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+          </div>
+          <h3 class="sc-title">Proyecto Web</h3>
+          <p class="sc-desc">
+            Un proyecto web que muestre tus habilidades de frontend. Puedes describir
+            el diseño, las funcionalidades y qué herramientas usaste.
+          </p>
+          <div class="sc-footer">
+            <a href="#" class="sc-link">Ver demo →</a>
+            <a href="#" class="sc-link ghost">GitHub</a>
+          </div>
+          <div class="sc-glow"></div>
+        </div>
+
+      </div>
+
+      <!-- Controles slider -->
+      <div class="slider-controls">
+        <button class="slider-btn prev" id="sliderPrev">&#8592;</button>
+        <div class="slider-dots" id="sliderDots"></div>
+        <button class="slider-btn next" id="sliderNext">&#8594;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<section id="contact">
+  <div class="container section-wrap">
+    <div class="section-label reveal">
+      <span class="label-num">04</span>
+      <span class="label-line"></span>
+      <span class="label-text">Contacto</span>
+    </div>
+
+    <div class="contact-layout">
+      <div class="contact-left reveal">
+        <h2 class="contact-heading">¿Tienes un proyecto<br>en mente? <span class="accent">Hablemos.</span></h2>
+        <p class="contact-sub">
+          Estoy abierto a colaboraciones, proyectos universitarios,
+          prácticas y cualquier idea interesante que quieras explorar.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:ssalas71@unilasallista.edu.co" class="cl-item">
+            <span class="cl-icon">✉</span>
+            <span>ssalas71@unilasallista.edu.co</span>
+          </a>
+          
+          <a href="https://github.com/SamuelSalas23" target="_blank" class="cl-item">
+            <span class="cl-icon">⌥</span>
+            <span>github.com/SamuelSalas23</span>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm">
+        <div class="cf-row">
+          <div class="cf-group">
+            <input type="text" id="cfName" placeholder=" " required/>
+            <label for="cfName">Nombre</label>
+          </div>
+          <div class="cf-group">
+            <input type="email" id="cfEmail" placeholder=" " required/>
+            <label for="cfEmail">Email</label>
+          </div>
+        </div>
+        <div class="cf-group">
+          <input type="text" id="cfSubject" placeholder=" " required/>
+          <label for="cfSubject">Asunto</label>
+        </div>
+        <div class="cf-group">
+          <textarea id="cfMsg" rows="5" placeholder=" " required></textarea>
+          <label for="cfMsg">Mensaje</label>
+        </div>
+        <button type="submit" class="btn-main full-w">
+          <span class="btn-text">Enviar mensaje</span>
+          <span class="btn-arrow">→</span>
+        </button>
+        <div class="form-success" id="formSuccess">
+          ✓ ¡Mensaje enviado! Te respondo pronto.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="container footer-inner">
+    <a class="nav-logo" href="#hero">
+      <span class="logo-bracket">&lt;</span>SS<span class="logo-bracket">/&gt;</span>
+    </a>
+    <p>Diseñado & desarrollado por <strong>Samuel Salas Echeverry</strong></p>
+    <span class="footer-year">© 2025</span>
+  </div>
+</footer>
+
+<script src="bootstrap_min8.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
